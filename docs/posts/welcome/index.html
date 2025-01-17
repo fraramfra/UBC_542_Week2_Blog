@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Tristan O’Malley">
+<meta name="author" content="Francisco Ramirez">
 <meta name="dcterms.date" content="2025-01-14">
 
-<title>Welcome To My Blog – Blog</title>
+<title>Data Science in Music Streaming: Recommendation Systems in a Nutshell – Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Welcome To My Blog</h1>
+      <h1 class="title">Data Science in Music Streaming: Recommendation Systems in a Nutshell</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">news</div>
               </div>
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Tristan O’Malley </p>
+               <p>Francisco Ramirez </p>
             </div>
     </div>
       
@@ -154,10 +154,41 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>This is the first post in a Quarto blog. Welcome!</p>
-<p><img src="thumbnail.jpg" class="img-fluid"></p>
-<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
-<p>Paco was here.</p>
+<p>Introduction</p>
+<p>The use of data and machine learning has had a major impact across most industries, with the music industry being no exception. Platforms like Spotify, Apple Music, and YouTube Music have played a major part in the decline of physical media as a means for music consumption as they have changed not just how we consume music, but how we discover it. All these platforms use interesting and powerful recommendation systems to customize the music listening experience for every user, helping them find new songs, albums, and artists based on our tastes. For aspiring data scientists, understanding how these systems work is not only interesting, but it also frames a great example of how data science can have a direct impact on our daily life, as well as on businesses and the people behind them.</p>
+<p><img src="Stock.png" class="img-fluid"></p>
+<p>The Importance of Recommendation Systems</p>
+<p>Recommendation systems are a key player of how streaming platforms work for each user. These systems do more than just suggest songs, but they are one of the main drivers to increase user engagement increase platform revenue through that increased engagement. For example, when Spotify suggests a song or artist to a user, it leads to more streams, more exposure, and higher earnings for the platform and the artist.</p>
+<p>The impact goes beyond the user as these algorithms also shape the way music is consumed globally, given that common interest in music creates trends. These algorithms help users discover new genres, artists, and songs they might not have found otherwise. As a result, recommendation systems serve a dual purpose: improving the user experience and driving revenue for artists and platforms.</p>
+<p>Now, we’ll dive into the key techniques behind recommendation systems, such as Collaborative Filtering and Content-Based Filtering, and explore how platforms like Spotify create User Taste Profiles to make personalized recommendations.</p>
+<p>Collaborative Filtering: Learning from Users One of the most common techniques used in music streaming recommendation systems is collaborative filtering. This method works by analyzing patterns in user behavior, for example, what you listen to, when you listen to certain songs, and how you interact with music. There are two main types of collaborative filtering:</p>
+<ol type="1">
+<li>User-based Collaborative Filtering: This approach looks for similarities between users. For example, if you and another user listen to the same artists, the system will recommend songs that the other person enjoyed and will assume that you might like them too. This method assumes that users with similar tastes in music will like similar songs.</li>
+</ol>
+<p><img src="UserBased.png" class="img-fluid"></p>
+<ol start="2" type="1">
+<li>Item-based Collaborative Filtering: Instead of focusing on users, this technique looks at the relationships between songs. If many users who listen to a particular song also enjoy another song, the system will suggest that second song to you. It’s a great way to discover music that you may not have otherwise encountered.</li>
+</ol>
+<p><img src="ItemBased.png" class="img-fluid"></p>
+<p>Collaborative filtering works by analyzing both implicit (behavioral: plays, skips, or repeat listens) and explicit feedback (likes, ratings, or playlist additions). The more data the system has, the better it can predict your musical tastes and make accurate recommendations.</p>
+<p>Spotify, for example, uses collaborative filtering to suggest new tracks based on your past listening behavior and what similar users enjoy. This allows the system to continuously improve, offering more personalized playlists and expanding your music taste within the platform.</p>
+<p>Content-Based Filtering: How do you describe a song?</p>
+<p>Another very useful technique used in music streaming recommendations is content-based filtering. This approach looks at the characteristics of the music itself, such as genre, tempo, lyrics, and mood. The system analyzes the features of the songs you’ve listened to and recommends tracks that share similar characteristics. For example, if you frequently listen to high-energy pop music with fast tempos, the system will suggest other pop songs with similar characteristics. If you like jazz, the system will try to find other jazz tracks that match the style you enjoy.</p>
+<p><img src="ContentBased.png" class="img-fluid"></p>
+<p>Content-based filtering is useful in cases where collaborative filtering might not have enough data, like when a user is new to the platform or when a song is newly released. This technique can still generate recommendations based on the features of the song rather than relying on user behavior patterns.</p>
+<p>User Taste Profiles as a Personality Trait</p>
+<p>Both collaborative and content-based filtering techniques come together to create user taste profiles. These profiles represent a user’s musical preferences based on their listening habits, behaviors, and interactions. These profiles enable streaming platforms like Spotify to deliver highly personalized experiences.</p>
+<p>For instance, Spotify’s Discover Weekly playlist is the most popular example of how these taste profiles work and how the algorithm is great to find your new favorite artists and songs. Over time, as you continue to listen, the system updates your taste profile, refining its suggestions to match your evolving preferences.</p>
+<p><img src="TasteProfile.png" class="img-fluid"></p>
+<p>The more you interact with the platform, the more accurate and personalized your recommendations become.</p>
+<p>Data Science = Direct Impact to the Artist</p>
+<p>While recommendation systems are designed to enhance the user experience, they also have a significant impact on the music industry. For artists, being featured in a recommendation can drastically increase their visibility. The more often their songs are recommended to users, the more likely they are to gain new listeners and, as a result, more streams.</p>
+<p>For instance, lesser-known artists can benefit from the discovery process facilitated by recommendation systems. This is especially important for independent and emerging artists who may not have the same visibility as mainstream stars. We will not talk about streaming monetization, because then this post will never end. However, the direct relationship between recommendation systems and artist earnings highlights the importance of understanding these algorithms from a data science perspective. As a data scientist, knowing how to optimize these systems is critical, not just for improving user experience but for driving business outcomes.</p>
+<p>Why Should Data Scientists Care?</p>
+<p>For aspiring data scientists, diving into recommendation systems is a great way to understand how machine learning works in real-world applications. Just as we used music streaming platforms in this post, these techniques represent an interesting technique used across different products (No, Amazon, I don’t want to buy another vacuum cleaner. You know I already bought one.) and platforms which have demonstrated direct impact to user engagement and business success.</p>
+<p>Conclusion</p>
+<p>Recommendation systems have become drivers of the music streaming experience. By combining techniques like collaborative filtering, content-based filtering, and user taste profiles, platforms like Spotify are able to deliver customized, engaging recommendations. For data scientists, understanding how these recommendation systems work provides a valuable opportunity to apply machine learning techniques to real-world problems and understand the broader impact of data science on the music industry and beyond.</p>
+<p>References: 1. Spotify. (n.d.). Understanding Recommendations. Spotify. Retrieved from https://www.spotify.com/ca-en/safetyandprivacy/understanding-recommendations 2. Music Tomorrow. (2022). How Spotify’s Recommendation System Works: A Complete Guide. Music Tomorrow. Retrieved from https://www.music-tomorrow.com/blog/how-spotify-recommendation-system-works-a-complete-guide-2022 3. Ichigo V. (2021). Detailed Explanation About Collaborative Filtering. Medium. Retrieved from https://medium.com/<span class="citation" data-cites="ichigo.v.gen12/detailed-explanation-about-collaborative-filtering-eab116e3b28b">@ichigo.v.gen12/detailed-explanation-about-collaborative-filtering-eab116e3b28b</span></p>
 
 
 
