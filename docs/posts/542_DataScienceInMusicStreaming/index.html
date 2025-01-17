@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Francisco Ramirez">
-<meta name="dcterms.date" content="2025-01-14">
+<meta name="dcterms.date" content="2025-01-18">
 
 <title>Data Science in Music Streaming: Recommendation Systems in a Nutshell – Blog</title>
 <style>
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -135,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 14, 2025</p>
+        <p class="date">January 18, 2025</p>
       </div>
     </div>
     
@@ -154,14 +154,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Introduction</p>
 <p>The use of data and machine learning has had a major impact across most industries, with the music industry being no exception. Platforms like Spotify, Apple Music, and YouTube Music have played a major part in the decline of physical media as a means for music consumption as they have changed not just how we consume music, but how we discover it. All these platforms use interesting and powerful recommendation systems to customize the music listening experience for every user, helping them find new songs, albums, and artists based on our tastes. For aspiring data scientists, understanding how these systems work is not only interesting, but it also frames a great example of how data science can have a direct impact on our daily life, as well as on businesses and the people behind them.</p>
 <p><img src="Stock.png" class="img-fluid"></p>
-<p>The Importance of Recommendation Systems</p>
+<section id="the-importance-of-recommendation-systems" class="level2">
+<h2 class="anchored" data-anchor-id="the-importance-of-recommendation-systems">The Importance of Recommendation Systems</h2>
 <p>Recommendation systems are a key player of how streaming platforms work for each user. These systems do more than just suggest songs, but they are one of the main drivers to increase user engagement increase platform revenue through that increased engagement. For example, when Spotify suggests a song or artist to a user, it leads to more streams, more exposure, and higher earnings for the platform and the artist.</p>
 <p>The impact goes beyond the user as these algorithms also shape the way music is consumed globally, given that common interest in music creates trends. These algorithms help users discover new genres, artists, and songs they might not have found otherwise. As a result, recommendation systems serve a dual purpose: improving the user experience and driving revenue for artists and platforms.</p>
 <p>Now, we’ll dive into the key techniques behind recommendation systems, such as Collaborative Filtering and Content-Based Filtering, and explore how platforms like Spotify create User Taste Profiles to make personalized recommendations.</p>
-<p>Collaborative Filtering: Learning from Users One of the most common techniques used in music streaming recommendation systems is collaborative filtering. This method works by analyzing patterns in user behavior, for example, what you listen to, when you listen to certain songs, and how you interact with music. There are two main types of collaborative filtering:</p>
+</section>
+<section id="collaborative-filtering-learning-from-users" class="level2">
+<h2 class="anchored" data-anchor-id="collaborative-filtering-learning-from-users">Collaborative Filtering: Learning from Users</h2>
+<p>One of the most common techniques used in music streaming recommendation systems is collaborative filtering. This method works by analyzing patterns in user behavior, for example, what you listen to, when you listen to certain songs, and how you interact with music. There are two main types of collaborative filtering:</p>
 <ol type="1">
 <li>User-based Collaborative Filtering: This approach looks for similarities between users. For example, if you and another user listen to the same artists, the system will recommend songs that the other person enjoyed and will assume that you might like them too. This method assumes that users with similar tastes in music will like similar songs.</li>
 </ol>
@@ -172,25 +175,43 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="ItemBased.png" class="img-fluid"></p>
 <p>Collaborative filtering works by analyzing both implicit (behavioral: plays, skips, or repeat listens) and explicit feedback (likes, ratings, or playlist additions). The more data the system has, the better it can predict your musical tastes and make accurate recommendations.</p>
 <p>Spotify, for example, uses collaborative filtering to suggest new tracks based on your past listening behavior and what similar users enjoy. This allows the system to continuously improve, offering more personalized playlists and expanding your music taste within the platform.</p>
-<p>Content-Based Filtering: How do you describe a song?</p>
+</section>
+<section id="content-based-filtering-how-do-you-describe-a-song" class="level2">
+<h2 class="anchored" data-anchor-id="content-based-filtering-how-do-you-describe-a-song">Content-Based Filtering: How do you describe a song?</h2>
 <p>Another very useful technique used in music streaming recommendations is content-based filtering. This approach looks at the characteristics of the music itself, such as genre, tempo, lyrics, and mood. The system analyzes the features of the songs you’ve listened to and recommends tracks that share similar characteristics. For example, if you frequently listen to high-energy pop music with fast tempos, the system will suggest other pop songs with similar characteristics. If you like jazz, the system will try to find other jazz tracks that match the style you enjoy.</p>
 <p><img src="ContentBased.png" class="img-fluid"></p>
 <p>Content-based filtering is useful in cases where collaborative filtering might not have enough data, like when a user is new to the platform or when a song is newly released. This technique can still generate recommendations based on the features of the song rather than relying on user behavior patterns.</p>
-<p>User Taste Profiles as a Personality Trait</p>
+</section>
+<section id="user-taste-profiles-as-a-personality-trait" class="level2">
+<h2 class="anchored" data-anchor-id="user-taste-profiles-as-a-personality-trait">User Taste Profiles as a Personality Trait</h2>
 <p>Both collaborative and content-based filtering techniques come together to create user taste profiles. These profiles represent a user’s musical preferences based on their listening habits, behaviors, and interactions. These profiles enable streaming platforms like Spotify to deliver highly personalized experiences.</p>
 <p>For instance, Spotify’s Discover Weekly playlist is the most popular example of how these taste profiles work and how the algorithm is great to find your new favorite artists and songs. Over time, as you continue to listen, the system updates your taste profile, refining its suggestions to match your evolving preferences.</p>
 <p><img src="TasteProfile.png" class="img-fluid"></p>
 <p>The more you interact with the platform, the more accurate and personalized your recommendations become.</p>
-<p>Data Science = Direct Impact to the Artist</p>
+</section>
+<section id="data-science-direct-impact-to-the-artist" class="level2">
+<h2 class="anchored" data-anchor-id="data-science-direct-impact-to-the-artist">Data Science = Direct Impact to the Artist</h2>
 <p>While recommendation systems are designed to enhance the user experience, they also have a significant impact on the music industry. For artists, being featured in a recommendation can drastically increase their visibility. The more often their songs are recommended to users, the more likely they are to gain new listeners and, as a result, more streams.</p>
 <p>For instance, lesser-known artists can benefit from the discovery process facilitated by recommendation systems. This is especially important for independent and emerging artists who may not have the same visibility as mainstream stars. We will not talk about streaming monetization, because then this post will never end. However, the direct relationship between recommendation systems and artist earnings highlights the importance of understanding these algorithms from a data science perspective. As a data scientist, knowing how to optimize these systems is critical, not just for improving user experience but for driving business outcomes.</p>
-<p>Why Should Data Scientists Care?</p>
+</section>
+<section id="why-should-data-scientists-care" class="level2">
+<h2 class="anchored" data-anchor-id="why-should-data-scientists-care">Why Should Data Scientists Care?</h2>
 <p>For aspiring data scientists, diving into recommendation systems is a great way to understand how machine learning works in real-world applications. Just as we used music streaming platforms in this post, these techniques represent an interesting technique used across different products (No, Amazon, I don’t want to buy another vacuum cleaner. You know I already bought one.) and platforms which have demonstrated direct impact to user engagement and business success.</p>
-<p>Conclusion</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>Recommendation systems have become drivers of the music streaming experience. By combining techniques like collaborative filtering, content-based filtering, and user taste profiles, platforms like Spotify are able to deliver customized, engaging recommendations. For data scientists, understanding how these recommendation systems work provides a valuable opportunity to apply machine learning techniques to real-world problems and understand the broader impact of data science on the music industry and beyond.</p>
-<p>References: 1. Spotify. (n.d.). Understanding Recommendations. Spotify. Retrieved from https://www.spotify.com/ca-en/safetyandprivacy/understanding-recommendations 2. Music Tomorrow. (2022). How Spotify’s Recommendation System Works: A Complete Guide. Music Tomorrow. Retrieved from https://www.music-tomorrow.com/blog/how-spotify-recommendation-system-works-a-complete-guide-2022 3. Ichigo V. (2021). Detailed Explanation About Collaborative Filtering. Medium. Retrieved from https://medium.com/<span class="citation" data-cites="ichigo.v.gen12/detailed-explanation-about-collaborative-filtering-eab116e3b28b">@ichigo.v.gen12/detailed-explanation-about-collaborative-filtering-eab116e3b28b</span></p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ol type="1">
+<li><p>Spotify. (n.d.). Understanding Recommendations. Spotify. Retrieved from https://www.spotify.com/ca-en/safetyandprivacy/understanding-recommendations</p></li>
+<li><p>Music Tomorrow. (2022). How Spotify’s Recommendation System Works: A Complete Guide. Music Tomorrow. Retrieved from https://www.music-tomorrow.com/blog/how-spotify-recommendation-system-works-a-complete-guide-2022</p></li>
+<li><p>Ichigo V. (2021). Detailed Explanation About Collaborative Filtering. Medium. Retrieved from https://medium.com/<span class="citation" data-cites="ichigo.v.gen12/detailed-explanation-about-collaborative-filtering-eab116e3b28b">@ichigo.v.gen12/detailed-explanation-about-collaborative-filtering-eab116e3b28b</span></p></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
